@@ -21,7 +21,8 @@
 
 import os
 import sys
-sys.path.insert(0, os.path.join(os.path.basename(__file__), '..', '..'))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.basename(__file__), '..', '..', '..')))
+print('!!', sys.path[0])
 from pyqtcmd.meta import VERSION, RELEASE
 
 project = 'pyqtcmd'
