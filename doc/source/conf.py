@@ -22,15 +22,16 @@
 import os
 import sys
 sys.path.insert(0, os.path.join(os.path.basename(__file__), '..', '..'))
+from pyqtcmd.meta import VERSION, RELEASE
 
 project = 'pyqtcmd'
 copyright = '2020, Jérôme Laheurte'
 author = 'Jérôme Laheurte'
 
 # The short X.Y version
-version = ''
+version = VERSION
 # The full version, including alpha/beta/rc tags
-release = '1.0'
+release = RELEASE
 
 
 # -- General configuration ---------------------------------------------------
