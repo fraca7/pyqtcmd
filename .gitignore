@@ -4,4 +4,5 @@ syntax: glob
 __pycache__
 .coverage
 htmlcov
+doc/build
 
