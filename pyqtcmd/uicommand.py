@@ -17,7 +17,7 @@ class UICommand(QtWidgets.QAction):
     enabled/disabled state that you can manage by overriding the
     should_be_enabled() method.
     """
-    def __init__(self, parent=None, *, text=None, icon=None, shortcut=None):
+    def __init__(self, parent=None, *, text=None, icon=None, shortcut=None, tip=None):
         super().__init__(parent)
         self.triggered.connect(self.do)
         self._check()
@@ -29,6 +29,9 @@ class UICommand(QtWidgets.QAction):
             self.setIcon(icon) # pragma: no cover
         if shortcut is not None:
             self.setShortcut(shortcut) # pragma: no cover
+        if tip is not None:
+            self.setToolTip(tip)
+            self.setStatusTip(tip)
 
     def history(self):
         """Override this to return the History object"""
@@ -62,6 +65,8 @@ class UICommand(QtWidgets.QAction):
             btn.setText(self.text())
             btn.setIcon(self.icon())
             btn.setEnabled(self.isEnabled())
+            btn.setToolTip(self.toolTip())
+            btn.setStatusTip(self.statusTip())
         btn.clicked.connect(self.do)
         self.changed.connect(changed)
         changed()
