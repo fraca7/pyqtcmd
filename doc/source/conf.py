@@ -22,7 +22,19 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.basename(__file__), '..', '..', '..')))
-print('!!', sys.path[0])
+
+# Mock PyQt5 so it doesn't need to be installed every time the doc is built on readthedocs...
+class PyQt5:
+    class QtCore:
+        class QObject:
+            pass
+        def pyqtSignal(*args):
+            pass
+    class QtWidgets:
+        class QAction:
+            pass
+sys.modules['PyQt5'] = PyQt5
+
 from pyqtcmd.meta import VERSION, RELEASE
 
 project = 'pyqtcmd'
