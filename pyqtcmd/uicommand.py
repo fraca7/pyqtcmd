@@ -67,6 +67,7 @@ class UICommand(QtWidgets.QAction):
             btn.setEnabled(self.isEnabled())
             btn.setToolTip(self.toolTip())
             btn.setStatusTip(self.statusTip())
+            btn.setVisible(self.isVisible())
         btn.clicked.connect(self.do)
         self.changed.connect(changed)
         changed()
