@@ -54,9 +54,10 @@ class CompositeCommand(Command):
     A Command that groups several other commands together.
     """
 
-    def __init__(self):
+    def __init__(self, label=None):
         super().__init__()
         self.__commands = []
+        self.__label = label
 
     def add_command(self, cmd):
         """
@@ -74,4 +75,4 @@ class CompositeCommand(Command):
             cmd.undo()
 
     def __str__(self):
-        return 'Composition of: %s' % ', '.join(map(str, self.__commands))
+        return self.__label or 'Composition of: %s' % ', '.join(map(str, self.__commands))
