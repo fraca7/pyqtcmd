@@ -3,6 +3,12 @@ See the full documentation at https://pyqtcmd.readthedocs.io/en/latest/
 
 Changelog:
 
+1.0.3
+=====
+
+  * Add a `past()` accessor to History
+  * Add a `label` argument to CompositeCommand constructor
+
 1.0.2
 =====
 
