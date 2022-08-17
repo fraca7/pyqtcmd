@@ -74,5 +74,8 @@ class CompositeCommand(Command):
         for cmd in reversed(self.__commands):
             cmd.undo()
 
+    def label(self):
+        return self.__label
+
     def __str__(self):
         return self.__label or 'Composition of: %s' % ', '.join(map(str, self.__commands))
