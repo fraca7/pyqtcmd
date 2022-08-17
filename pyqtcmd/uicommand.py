@@ -91,11 +91,7 @@ class UndoUICommandMixin:
         return self.history().can_undo()
 
     def _check(self, *unused_):
-        label = self.history().undo_label()
-        if label is not None:
-            self.setText(label)
-        else:
-            self.setText(self.__original_text)
+        self.setText(self.history().undo_label() or self.__original_text)
         super()._check()
 
 
@@ -114,11 +110,7 @@ class RedoUICommandMixin:
         return self.history().can_redo()
 
     def _check(self, *unused_):
-        label = self.history().redo_label()
-        if label is not None:
-            self.setText(label)
-        else:
-            self.setText(self.__original_text)
+        self.setText(self.history().redo_label() or self.__original_text)
         super()._check()
 
 
