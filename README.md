@@ -3,6 +3,12 @@ See the full documentation at https://pyqtcmd.readthedocs.io/en/latest/
 
 Changelog:
 
+1.0.4
+=====
+
+  * Fix labels for undo/redo UICommand mixins
+  * Fix label for CompositeCommand
+
 1.0.3
 =====
 
