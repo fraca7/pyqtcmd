@@ -163,3 +163,13 @@ class History(QtCore.QObject):
         self.__version = self.__version._replace(minor=self.__version.minor + 1)
         self.logger.debug('Version is now %s/%s', self.__version, self.__saved_version)
         self.changed.emit()
+
+    def past(self):
+        """
+        Return a copy of past Command objects. This may be useful in
+        situation where, for instance, a modal dialog has a 'local'
+        history, and you want to encapsulate everything that has been
+        done in this dialog in a single CompositeCommand when the
+        dialog is closed, and add it to the 'main' history.
+        """
+        return self.__past[:]
