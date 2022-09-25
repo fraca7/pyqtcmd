@@ -3,6 +3,12 @@ See the full documentation at https://pyqtcmd.readthedocs.io/en/latest/
 
 Changelog:
 
+1.0.5
+=====
+
+  * Drop explicit dependency on PyQt5
+  * PyQt6 compatibility
+
 1.0.4
 =====
 

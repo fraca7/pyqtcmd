@@ -8,7 +8,10 @@ import collections
 import contextlib
 import logging
 
-from PyQt5 import QtCore
+try:
+    from PyQt5 import QtCore
+except ModuleNotFoundError: # pragma: no cover
+    from PyQt6 import QtCore
 
 
 class HistoryVersion(collections.namedtuple('HistoryVersion', ['major', 'minor'])):

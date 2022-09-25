@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-PyQt5 implementation of the Command pattern, with niceties
+PyQt5/PyQt6 implementation of the Command pattern, with niceties
 """
 
 from .history import History, ConsistencyError

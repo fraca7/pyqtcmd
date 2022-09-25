@@ -4,10 +4,13 @@
 Integration of commands with UI elements
 """
 
-from PyQt5 import QtWidgets
+try:
+    from PyQt5.QtWidgets import QAction
+except ModuleNotFoundError: # pragma: no cover
+    from PyQt6.QtGui import QAction
 
 
-class UICommand(QtWidgets.QAction):
+class UICommand(QAction):
     """
     An UICommand is the intermediate between UI elements and the
     underlying Commands. A Command encapsulates a single behavior; an

@@ -2,7 +2,10 @@
 
 import unittest
 
-from PyQt5 import QtCore, QtWidgets
+try:
+    from PyQt5 import QtCore, QtWidgets
+except ModuleNotFoundError:
+    from PyQt6 import QtCore, QtWidgets
 
 from pyqtcmd import History, Command, UICommand, UndoUICommandMixin, RedoUICommandMixin, NeedsSelectionUICommandMixin
 

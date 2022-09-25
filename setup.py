@@ -16,7 +16,7 @@ with codecs.getreader('utf-8')(open('README.md', 'rb')) as fileobj:
 setup(
     name='pyqtcmd',
     version=RELEASE,
-    description='PyQt5-based Command implementation for undo/redo',
+    description='PyQt6/PyQt5-based Command implementation for undo/redo',
     long_description=README,
     long_description_content_type='text/markdown',
     url='https://github.com/fraca7/pyqtcmd',
@@ -31,5 +31,5 @@ setup(
     'Topic :: Software Development :: Libraries',
     ],
     packages=['pyqtcmd'],
-    install_requires=['PyQt5'],
+    install_requires=[],
     )
