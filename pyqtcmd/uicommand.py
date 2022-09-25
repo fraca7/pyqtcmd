@@ -5,9 +5,11 @@ Integration of commands with UI elements
 """
 
 try:
-    from PyQt5.QtWidgets import QAction
+    from PyQt5 import QtWidgets
+    QAction = QtWidgets.QAction
 except ModuleNotFoundError: # pragma: no cover
-    from PyQt6.QtGui import QAction
+    from PyQt6 import QtGui
+    QAction = QtGui.QAction
 
 
 class UICommand(QAction):
