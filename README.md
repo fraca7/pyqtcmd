@@ -1,4 +1,9 @@
 
+NOTE
+====
+
+This has been moved to https://codeberg.org/fraca7/pyqtcmd
+
 See the full documentation at https://pyqtcmd.readthedocs.io/en/latest/
 
 Changelog:
